@@ -1,7 +1,7 @@
 // Save this class in your mod and generate all required imports
 
 /**
- * Made with Blockbench 5.1.4
+ * Made with Blockbench 5.1.6
  * Exported for Minecraft version 1.19 or later with Mojang mappings
  * @author Author
  */
@@ -61,7 +61,7 @@ public class RoboZombieAnimation {
 			new Keyframe(0.76F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 2.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.08F, KeyframeAnimations.posVec(0.0F, 0.5F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.16F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -73,7 +73,7 @@ public class RoboZombieAnimation {
 			new Keyframe(0.72F, KeyframeAnimations.posVec(0.0F, 0.5F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.8F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.08F, KeyframeAnimations.posVec(0.0F, 0.5F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.16F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -96,6 +96,13 @@ public class RoboZombieAnimation {
 			new Keyframe(0.72F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.8F, KeyframeAnimations.posVec(0.0F, 0.5F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.88F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
+		))
+		.addAnimation("tires", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.478F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.2F, KeyframeAnimations.posVec(0.0F, 0.06F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.48F, KeyframeAnimations.posVec(0.0F, 0.478F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.76F, KeyframeAnimations.posVec(0.0F, 0.06F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, 0.478F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.build();
 
@@ -129,32 +136,32 @@ public class RoboZombieAnimation {
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
 		.addAnimation("body", new AnimationChannel(AnimationChannel.Targets.POSITION, 
-			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.04F, KeyframeAnimations.posVec(0.26F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.08F, KeyframeAnimations.posVec(0.01F, -2.25F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.12F, KeyframeAnimations.posVec(0.26F, -1.99F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.16F, KeyframeAnimations.posVec(0.0F, -1.74F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.2F, KeyframeAnimations.posVec(0.0F, -2.0F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.24F, KeyframeAnimations.posVec(-0.25F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.28F, KeyframeAnimations.posVec(0.01F, -1.75F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.32F, KeyframeAnimations.posVec(-0.25F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.36F, KeyframeAnimations.posVec(0.01F, -2.25F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.4F, KeyframeAnimations.posVec(0.26F, -1.99F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.44F, KeyframeAnimations.posVec(0.0F, -1.74F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.48F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.52F, KeyframeAnimations.posVec(-0.25F, -2.0F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.56F, KeyframeAnimations.posVec(0.01F, -1.75F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.6F, KeyframeAnimations.posVec(-0.25F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.64F, KeyframeAnimations.posVec(0.01F, -2.25F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.68F, KeyframeAnimations.posVec(0.26F, -1.99F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.72F, KeyframeAnimations.posVec(0.0F, -1.74F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.76F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.8F, KeyframeAnimations.posVec(-0.25F, -2.0F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.84F, KeyframeAnimations.posVec(0.01F, -1.75F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.88F, KeyframeAnimations.posVec(0.0F, -1.74F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.92F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(0.96F, KeyframeAnimations.posVec(-0.25F, -2.25F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
-			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -2.25F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
+			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.04F, KeyframeAnimations.posVec(0.26F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.08F, KeyframeAnimations.posVec(0.01F, -2.6688F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.12F, KeyframeAnimations.posVec(0.26F, -2.5665F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.16F, KeyframeAnimations.posVec(0.0F, -2.4681F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.2F, KeyframeAnimations.posVec(0.0F, -2.5704F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.24F, KeyframeAnimations.posVec(-0.25F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.28F, KeyframeAnimations.posVec(0.01F, -2.472F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.32F, KeyframeAnimations.posVec(-0.25F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.36F, KeyframeAnimations.posVec(0.01F, -2.6688F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.4F, KeyframeAnimations.posVec(0.26F, -2.5665F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.44F, KeyframeAnimations.posVec(0.0F, -2.4681F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.48F, KeyframeAnimations.posVec(0.0F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.52F, KeyframeAnimations.posVec(-0.25F, -2.5704F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.56F, KeyframeAnimations.posVec(0.01F, -2.472F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.6F, KeyframeAnimations.posVec(-0.25F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.64F, KeyframeAnimations.posVec(0.01F, -2.6688F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.68F, KeyframeAnimations.posVec(0.26F, -2.5665F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.72F, KeyframeAnimations.posVec(0.0F, -2.4681F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.76F, KeyframeAnimations.posVec(0.0F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.8F, KeyframeAnimations.posVec(-0.25F, -2.5704F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.84F, KeyframeAnimations.posVec(0.01F, -2.472F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.88F, KeyframeAnimations.posVec(0.0F, -2.4681F, -0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.92F, KeyframeAnimations.posVec(0.0F, -2.5704F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(0.96F, KeyframeAnimations.posVec(-0.25F, -2.6688F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
+			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -2.6688F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
 		.addAnimation("right_leg", new AnimationChannel(AnimationChannel.Targets.SCALE, 
 			new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
@@ -162,10 +169,10 @@ public class RoboZombieAnimation {
 		.addAnimation("left_leg", new AnimationChannel(AnimationChannel.Targets.SCALE, 
 			new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.04F, KeyframeAnimations.posVec(0.26F, -2.5F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.08F, KeyframeAnimations.posVec(0.01F, -2.25F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
@@ -193,10 +200,10 @@ public class RoboZombieAnimation {
 			new Keyframe(0.96F, KeyframeAnimations.posVec(-0.25F, -2.0F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.04F, KeyframeAnimations.posVec(0.26F, -2.5F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.08F, KeyframeAnimations.posVec(0.01F, -2.25F, 0.25F), AnimationChannel.Interpolations.CATMULLROM),
@@ -237,7 +244,7 @@ public class RoboZombieAnimation {
 		.build();
 
 	public static final AnimationDefinition idle = AnimationDefinition.Builder.withLength(3.0F).looping()
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.08F, KeyframeAnimations.degreeVec(-67.3885F, 5.2321F, 2.1756F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.16F, KeyframeAnimations.degreeVec(-67.4865F, 0.6143F, 0.2552F), AnimationChannel.Interpolations.LINEAR),
@@ -252,7 +259,7 @@ public class RoboZombieAnimation {
 			new Keyframe(2.32F, KeyframeAnimations.degreeVec(-67.4227F, -4.6185F, -1.9175F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(3.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.08F, KeyframeAnimations.degreeVec(-67.3885F, -5.2321F, -2.1756F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.16F, KeyframeAnimations.degreeVec(-67.4865F, -0.6143F, -0.2552F), AnimationChannel.Interpolations.LINEAR),
@@ -320,13 +327,13 @@ public class RoboZombieAnimation {
 			new Keyframe(1.32F, KeyframeAnimations.degreeVec(27.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.48F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.32F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.48F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.24F, KeyframeAnimations.posVec(0.0F, 0.0F, 3.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.posVec(0.0F, -1.0F, -5.0F), AnimationChannel.Interpolations.LINEAR),
@@ -335,13 +342,13 @@ public class RoboZombieAnimation {
 			new Keyframe(1.32F, KeyframeAnimations.posVec(0.0F, -1.0F, -5.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.48F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.32F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.48F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.24F, KeyframeAnimations.posVec(0.0F, 0.0F, 3.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.posVec(0.0F, -1.0F, -5.0F), AnimationChannel.Interpolations.LINEAR),
@@ -391,7 +398,7 @@ public class RoboZombieAnimation {
 		))
 		.build();
 
-	public static final AnimationDefinition action = AnimationDefinition.Builder.withLength(0.76F)
+	public static final AnimationDefinition attack = AnimationDefinition.Builder.withLength(0.76F)
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.16F, KeyframeAnimations.degreeVec(22.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -413,7 +420,7 @@ public class RoboZombieAnimation {
 			new Keyframe(0.48F, KeyframeAnimations.degreeVec(32.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.64F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.16F, KeyframeAnimations.degreeVec(42.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.36F, KeyframeAnimations.degreeVec(-87.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -422,14 +429,14 @@ public class RoboZombieAnimation {
 			new Keyframe(0.68F, KeyframeAnimations.degreeVec(20.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.76F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.16F, KeyframeAnimations.posVec(0.01F, 0.1F, -4.75F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.36F, KeyframeAnimations.posVec(0.0F, 0.0F, 8.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.48F, KeyframeAnimations.posVec(-0.1293F, -1.7522F, -6.5935F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.68F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.16F, KeyframeAnimations.degreeVec(35.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.36F, KeyframeAnimations.degreeVec(-87.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -438,7 +445,7 @@ public class RoboZombieAnimation {
 			new Keyframe(0.68F, KeyframeAnimations.degreeVec(20.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.76F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.16F, KeyframeAnimations.posVec(-0.01F, 0.1F, -3.7F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.36F, KeyframeAnimations.posVec(0.0F, 0.0F, 8.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -523,10 +530,10 @@ public class RoboZombieAnimation {
 			new Keyframe(1.0F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.2F, KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.posVec(0.0F, -2.0F, 4.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.6F, KeyframeAnimations.posVec(0.0F, -2.0F, 3.0F), AnimationChannel.Interpolations.LINEAR),
@@ -536,10 +543,10 @@ public class RoboZombieAnimation {
 			new Keyframe(1.56F, KeyframeAnimations.posVec(0.0F, -2.0F, -1.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.64F, KeyframeAnimations.posVec(0.0F, -2.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.posVec(0.0F, -2.0F, 4.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.6F, KeyframeAnimations.posVec(0.0F, -2.0F, 3.0F), AnimationChannel.Interpolations.LINEAR),
