@@ -8,10 +8,10 @@
 public class SuperBrainzAnimation {
 	public static final AnimationDefinition idle = AnimationDefinition.Builder.withLength(0.0F).looping()
 		.addAnimation("left_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-69.036F, 0.0F, 4.3981F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-67.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-69.036F, 0.0F, -4.3981F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.build();
 
