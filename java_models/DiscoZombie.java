@@ -9,8 +9,10 @@ public class DiscoZombie<T extends Entity> extends EntityModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
 	private final ModelPart head;
-	private final ModelPart afro;
 	private final ModelPart hat;
+	private final ModelPart afro;
+	private final ModelPart face;
+	private final ModelPart glasses;
 	private final ModelPart left_arm;
 	private final ModelPart right_arm;
 	private final ModelPart left_leg;
@@ -20,8 +22,10 @@ public class DiscoZombie<T extends Entity> extends EntityModel<T> {
 		this.root = root.getChild("root");
 		this.body = this.root.getChild("body");
 		this.head = this.root.getChild("head");
-		this.afro = this.head.getChild("afro");
 		this.hat = this.head.getChild("hat");
+		this.afro = this.head.getChild("afro");
+		this.face = this.afro.getChild("face");
+		this.glasses = this.face.getChild("glasses");
 		this.left_arm = this.root.getChild("left_arm");
 		this.right_arm = this.root.getChild("right_arm");
 		this.left_leg = this.root.getChild("left_leg");
@@ -36,14 +40,17 @@ public class DiscoZombie<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(48, 22).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
 
-		PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create().texOffs(2, 42).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 74).addBox(-4.5F, -8.5F, -4.5F, 9.0F, 9.0F, 9.0F, new CubeDeformation(0.0F))
-		.texOffs(34, 50).addBox(-6.0F, -8.0F, -4.25F, 12.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+		PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, -24.0F, 0.0F));
+
+		PartDefinition hat = head.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, -8.0F, 0.0F));
 
 		PartDefinition afro = head.addOrReplaceChild("afro", CubeListBuilder.create().texOffs(0, 22).addBox(-7.0F, -5.0F, -5.0F, 14.0F, 10.0F, 10.0F, new CubeDeformation(0.0F))
 		.texOffs(0, 0).addBox(-7.5F, -5.5F, -5.5F, 15.0F, 11.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -7.0F, 2.5F));
 
-		PartDefinition hat = head.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, -8.0F, 0.0F));
+		PartDefinition face = afro.addOrReplaceChild("face", CubeListBuilder.create().texOffs(2, 42).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 74).addBox(-4.5F, -8.5F, -4.5F, 9.0F, 9.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 7.0F, -2.5F));
+
+		PartDefinition glasses = face.addOrReplaceChild("glasses", CubeListBuilder.create().texOffs(34, 50).addBox(-6.0F, -8.0F, -4.25F, 12.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create().texOffs(0, 58).addBox(0.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, new CubeDeformation(0.0F))
 		.texOffs(52, 9).addBox(0.0F, 5.0F, -2.0F, 4.0F, 3.0F, 5.0F, new CubeDeformation(0.0F))
