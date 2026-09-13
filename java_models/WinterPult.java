@@ -72,6 +72,10 @@ public class MelonPult<T extends MelonPult> extends EntityModel<T> {
 
 		PartDefinition cube_r2 = basket.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(32, 47).addBox(0.0F, -6.5F, -3.5F, 1.0F, 13.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-6.0F, -8.5F, 0.5F, 0.0F, 0.0F, 3.1416F));
 
+		PartDefinition cube_r3 = basket.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(52, 17).addBox(0.0F, -9.5F, -2.5F, 0.0F, 19.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -8.5F, 8.5F, 0.0F, 0.0F, -0.7854F));
+
+		PartDefinition cube_r4 = basket.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(52, 17).addBox(0.0F, -9.5F, -2.5F, 0.0F, 19.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -8.5F, 8.5F, 0.0F, 0.0F, 0.7854F));
+
 		PartDefinition projectile = basket.addOrReplaceChild("projectile", CubeListBuilder.create().texOffs(0, 22).addBox(-7.0F, -5.5F, -6.0F, 14.0F, 11.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -8.5F, -3.0F, 0.0F, -1.5708F, 0.0F));
 
 		PartDefinition leaves = body.addOrReplaceChild("leaves", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
