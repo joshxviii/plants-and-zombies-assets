@@ -1,7 +1,7 @@
 // Save this class in your mod and generate all required imports
 
 /**
- * Made with Blockbench 5.1.6
+ * Made with Blockbench 5.2.0
  * Exported for Minecraft version 1.19 or later with Mojang mappings
  * @author Author
  */
@@ -102,7 +102,7 @@ public class PazZombieAnimation {
 		))
 		.build();
 
-	public static final AnimationDefinition float = AnimationDefinition.Builder.withLength(0.0F).looping()
+	public static final AnimationDefinition balloon_float = AnimationDefinition.Builder.withLength(0.0F).looping()
 		.addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(30.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
@@ -122,7 +122,7 @@ public class PazZombieAnimation {
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("root", new AnimationChannel(AnimationChannel.Targets.POSITION, 
-			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 3.0F, 5.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -1.575F, -1.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.build();
 }
