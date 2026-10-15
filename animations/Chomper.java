@@ -1,7 +1,7 @@
 // Save this class in your mod and generate all required imports
 
 /**
- * Made with Blockbench 5.1.3
+ * Made with Blockbench 5.2.2
  * Exported for Minecraft version 1.19 or later with Mojang mappings
  * @author Author
  */
@@ -169,7 +169,7 @@ public class ChomperAnimation {
 		))
 		.build();
 
-	public static final AnimationDefinition cooldown = AnimationDefinition.Builder.withLength(4.0F).looping()
+	public static final AnimationDefinition chew = AnimationDefinition.Builder.withLength(4.0F).looping()
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.SCALE, 
 			new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.9F, 1.05F, 1.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.32F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -325,6 +325,9 @@ public class ChomperAnimation {
 			new Keyframe(3.0F, KeyframeAnimations.degreeVec(-7.5F, 40.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(3.52F, KeyframeAnimations.degreeVec(-7.5F, 10.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(4.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM)
+		))
+		.addAnimation("toung", new AnimationChannel(AnimationChannel.Targets.SCALE, 
+			new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("toung_2", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
