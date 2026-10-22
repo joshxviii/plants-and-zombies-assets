@@ -1,4 +1,4 @@
-// Made with Blockbench 5.1.6
+// Made with Blockbench 5.2.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -73,8 +73,8 @@ public class RoboZombie<T extends Entity> extends EntityModel<T> {
 		PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(66, 89).addBox(-2.5F, 0.0F, -2.5F, 5.0F, 12.0F, 5.0F, new CubeDeformation(0.0F))
 		.texOffs(92, 35).addBox(-2.5F, 9.0F, -4.5F, 5.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(3.5F, 0.0F, -0.5F));
 
-		PartDefinition treads = root.addOrReplaceChild("treads", CubeListBuilder.create().texOffs(74, 58).addBox(-3.0F, 0.0F, -5.0F, 6.0F, 8.0F, 9.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 76).addBox(-6.0F, 3.0F, -3.0F, 12.0F, 7.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition treads = root.addOrReplaceChild("treads", CubeListBuilder.create().texOffs(74, 58).addBox(-3.0F, 2.5F, -5.0F, 6.0F, 8.0F, 9.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 76).addBox(-6.0F, 3.5F, -3.0F, 12.0F, 7.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition tires = treads.addOrReplaceChild("tires", CubeListBuilder.create().texOffs(0, 0).addBox(2.0F, -1.5F, -10.5F, 9.0F, 7.0F, 21.0F, new CubeDeformation(0.0F))
 		.texOffs(0, 28).addBox(-11.0F, -1.5F, -10.5F, 9.0F, 7.0F, 21.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 6.5F, -0.5F));
