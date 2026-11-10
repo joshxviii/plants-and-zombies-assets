@@ -12,6 +12,7 @@ public class ElectricSlide<T extends Entity> extends EntityModel<T> {
 	private final ModelPart afro;
 	private final ModelPart glasses;
 	private final ModelPart body;
+	private final ModelPart cape;
 	private final ModelPart right_arm;
 	private final ModelPart left_arm;
 	private final ModelPart right_leg;
@@ -26,6 +27,7 @@ public class ElectricSlide<T extends Entity> extends EntityModel<T> {
 		this.afro = this.head.getChild("afro");
 		this.glasses = this.head.getChild("glasses");
 		this.body = this.root.getChild("body");
+		this.cape = this.body.getChild("cape");
 		this.right_arm = this.root.getChild("right_arm");
 		this.left_arm = this.root.getChild("left_arm");
 		this.right_leg = this.root.getChild("right_leg");
@@ -57,6 +59,8 @@ public class ElectricSlide<T extends Entity> extends EntityModel<T> {
 		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F))
 		.texOffs(16, 32).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.25F))
 		.texOffs(63, 48).addBox(0.0F, -1.0F, 2.0F, 0.0F, 10.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -4.0F, 0.0F));
+
+		PartDefinition cape = body.addOrReplaceChild("cape", CubeListBuilder.create().texOffs(62, 43).addBox(-4.0F, 0.0F, 0.0F, 8.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 2.0F));
 
 		PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create().texOffs(40, 16).addBox(-3.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, new CubeDeformation(0.0F))
 		.texOffs(48, 48).addBox(-3.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, new CubeDeformation(0.25F)), PartPose.offset(-4.0F, -2.0F, 0.0F));
