@@ -1,4 +1,4 @@
-// Made with Blockbench 5.1.6
+// Made with Blockbench 5.2.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -23,6 +23,14 @@ public class Gargantuar<T extends Entity> extends EntityModel<T> {
 	private final ModelPart right_arm;
 	private final ModelPart left_arm;
 	private final ModelPart pole;
+	private final ModelPart dolphin;
+	private final ModelPart head3;
+	private final ModelPart nose;
+	private final ModelPart tail;
+	private final ModelPart tail_fin;
+	private final ModelPart back_fin;
+	private final ModelPart left_fin;
+	private final ModelPart right_fin;
 	private final ModelPart right_leg;
 	private final ModelPart left_leg;
 
@@ -44,6 +52,14 @@ public class Gargantuar<T extends Entity> extends EntityModel<T> {
 		this.right_arm = this.root.getChild("right_arm");
 		this.left_arm = this.root.getChild("left_arm");
 		this.pole = this.left_arm.getChild("pole");
+		this.dolphin = this.pole.getChild("dolphin");
+		this.head3 = this.dolphin.getChild("head3");
+		this.nose = this.head3.getChild("nose");
+		this.tail = this.dolphin.getChild("tail");
+		this.tail_fin = this.tail.getChild("tail_fin");
+		this.back_fin = this.dolphin.getChild("back_fin");
+		this.left_fin = this.dolphin.getChild("left_fin");
+		this.right_fin = this.dolphin.getChild("right_fin");
 		this.right_leg = this.root.getChild("right_leg");
 		this.left_leg = this.root.getChild("left_leg");
 	}
@@ -95,11 +111,27 @@ public class Gargantuar<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition pole_r1 = pole.addOrReplaceChild("pole_r1", CubeListBuilder.create().texOffs(0, 118).addBox(-23.0F, -2.5F, -2.5F, 47.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-3.0F, 0.0F, -10.7857F, 0.0F, 1.5708F, 0.0F));
 
+		PartDefinition dolphin = pole.addOrReplaceChild("dolphin", CubeListBuilder.create().texOffs(128, 13).addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 13.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-5.5F, 1.5F, -20.2857F, 0.0F, 0.0F, 1.5708F));
+
+		PartDefinition head3 = dolphin.addOrReplaceChild("head3", CubeListBuilder.create().texOffs(128, 0).addBox(-4.0F, -7.0F, -6.0F, 8.0F, 7.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+		PartDefinition nose = head3.addOrReplaceChild("nose", CubeListBuilder.create().texOffs(128, 13).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, -10.0F));
+
+		PartDefinition tail = dolphin.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(128, 33).addBox(-2.0F, -2.5F, -1.0F, 4.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -2.5F, 14.0F));
+
+		PartDefinition tail_fin = tail.addOrReplaceChild("tail_fin", CubeListBuilder.create().texOffs(128, 49).addBox(-5.0F, -0.5F, -1.0F, 10.0F, 1.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 9.0F));
+
+		PartDefinition back_fin = dolphin.addOrReplaceChild("back_fin", CubeListBuilder.create().texOffs(157, 0).addBox(-0.5F, -4.25F, -1.0F, 1.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -7.0F, 5.0F, -0.5236F, 0.0F, 0.0F));
+
+		PartDefinition left_fin = dolphin.addOrReplaceChild("left_fin", CubeListBuilder.create().texOffs(168, 0).addBox(0.0F, -1.0F, -1.5F, 8.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(3.0F, -1.0F, 2.0F, 0.0F, -0.4363F, 0.3491F));
+
+		PartDefinition right_fin = dolphin.addOrReplaceChild("right_fin", CubeListBuilder.create().texOffs(168, 6).addBox(-8.0F, -1.0F, -1.5F, 8.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-3.0F, -1.0F, 2.0F, 0.0F, 0.4363F, -0.3491F));
+
 		PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 80).addBox(-4.0F, 0.0F, -3.0F, 6.0F, 13.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(-3.0F, 0.0F, 2.0F));
 
 		PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(72, 34).addBox(-2.0F, 0.0F, -3.0F, 6.0F, 13.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(3.0F, 0.0F, 2.0F));
 
-		return LayerDefinition.create(meshdefinition, 128, 128);
+		return LayerDefinition.create(meshdefinition, 192, 192);
 	}
 
 	@Override
