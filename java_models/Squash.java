@@ -7,10 +7,12 @@ public class Squash<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "squash"), "main");
 	private final ModelPart body;
+	private final ModelPart locator_hat;
 	private final ModelPart brow;
 
 	public Squash(ModelPart root) {
 		this.body = root.getChild("body");
+		this.locator_hat = this.body.getChild("locator_hat");
 		this.brow = this.body.getChild("brow");
 	}
 
@@ -26,6 +28,8 @@ public class Squash<T extends Entity> extends EntityModel<T> {
 		PartDefinition cube_r1 = body.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(26, 46).addBox(0.0F, -4.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -18.0F, 0.0F, 0.331F, -0.1486F, 0.3656F));
 
 		PartDefinition cube_r2 = body.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(26, 46).addBox(0.0F, -4.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -18.0F, 0.0F, 2.0025F, -1.2091F, -1.612F));
+
+		PartDefinition locator_hat = body.addOrReplaceChild("locator_hat", CubeListBuilder.create(), PartPose.offset(0.0F, -18.0F, 0.0F));
 
 		PartDefinition brow = body.addOrReplaceChild("brow", CubeListBuilder.create().texOffs(0, 48).addBox(-6.0F, -1.0F, -1.0F, 12.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -13.0F, -7.0F));
 

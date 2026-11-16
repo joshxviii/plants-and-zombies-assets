@@ -1,4 +1,4 @@
-// Made with Blockbench 5.1.6
+// Made with Blockbench 5.2.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -8,11 +8,13 @@ public class WallNut<T extends WallNut> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "wallnut"), "main");
 	private final ModelPart roll;
 	private final ModelPart body;
+	private final ModelPart locator_hat;
 	private final ModelPart inner;
 
 	public WallNut(ModelPart root) {
 		this.roll = root.getChild("roll");
 		this.body = this.roll.getChild("body");
+		this.locator_hat = this.body.getChild("locator_hat");
 		this.inner = this.body.getChild("inner");
 	}
 
@@ -25,6 +27,8 @@ public class WallNut<T extends WallNut> extends EntityModel<T> {
 		PartDefinition body = roll.addOrReplaceChild("body", CubeListBuilder.create().texOffs(3, 5).addBox(-7.0F, -15.0F, -7.0F, 14.0F, 13.0F, 14.0F, new CubeDeformation(0.0F))
 		.texOffs(59, 37).addBox(-6.0F, -18.0F, -6.0F, 12.0F, 3.0F, 12.0F, new CubeDeformation(0.0F))
 		.texOffs(59, 54).addBox(-6.0F, -2.0F, -6.0F, 12.0F, 2.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 9.0F, 0.0F));
+
+		PartDefinition locator_hat = body.addOrReplaceChild("locator_hat", CubeListBuilder.create(), PartPose.offset(0.0F, -18.0F, 0.0F));
 
 		PartDefinition inner = body.addOrReplaceChild("inner", CubeListBuilder.create().texOffs(3, 37).addBox(-6.0F, -15.0F, -6.0F, 12.0F, 12.0F, 12.0F, new CubeDeformation(0.0F))
 		.texOffs(67, 2).addBox(-5.0F, -17.0F, -5.0F, 10.0F, 2.0F, 10.0F, new CubeDeformation(0.0F))
