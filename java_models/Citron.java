@@ -10,6 +10,7 @@ public class Citron<T extends Entity> extends EntityModel<T> {
 	private final ModelPart bot;
 	private final ModelPart neck;
 	private final ModelPart head;
+	private final ModelPart locator_hat;
 	private final ModelPart glasses;
 	private final ModelPart eyebrows;
 	private final ModelPart left_eyebrow;
@@ -31,6 +32,7 @@ public class Citron<T extends Entity> extends EntityModel<T> {
 		this.bot = this.body.getChild("bot");
 		this.neck = this.bot.getChild("neck");
 		this.head = this.bot.getChild("head");
+		this.locator_hat = this.head.getChild("locator_hat");
 		this.glasses = this.head.getChild("glasses");
 		this.eyebrows = this.head.getChild("eyebrows");
 		this.left_eyebrow = this.eyebrows.getChild("left_eyebrow");
@@ -66,6 +68,8 @@ public class Citron<T extends Entity> extends EntityModel<T> {
 		.texOffs(44, -6).addBox(0.0F, -11.0F, -5.0F, 0.0F, 5.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition cube_r1 = head.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(55, 3).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -1.0F, -5.0F, -0.7854F, 0.0F, 0.0F));
+
+		PartDefinition locator_hat = head.addOrReplaceChild("locator_hat", CubeListBuilder.create(), PartPose.offset(0.0F, -6.0F, 0.0F));
 
 		PartDefinition glasses = head.addOrReplaceChild("glasses", CubeListBuilder.create().texOffs(50, 0).addBox(-3.5F, -1.0F, 0.0F, 7.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -2.0F, -5.25F));
 
