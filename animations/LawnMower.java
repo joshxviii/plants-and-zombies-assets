@@ -6,7 +6,7 @@
  * @author Author
  */
 public class LawnMowerAnimation {
-	public static final AnimationDefinition action = AnimationDefinition.Builder.withLength(0.52F).looping()
+	public static final AnimationDefinition mow = AnimationDefinition.Builder.withLength(0.52F).looping()
 		.addAnimation("motor", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.04F, KeyframeAnimations.posVec(-0.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -22,6 +22,10 @@ public class LawnMowerAnimation {
 			new Keyframe(0.44F, KeyframeAnimations.posVec(0.99F, -0.25F, -0.45F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.48F, KeyframeAnimations.posVec(-0.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.52F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+		))
+		.addAnimation("blade", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.52F, KeyframeAnimations.degreeVec(0.0F, -1260.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.build();
 }
